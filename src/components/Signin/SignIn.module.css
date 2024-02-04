@@ -1,0 +1,38 @@
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.signin-bg-photo {
+  width: 50%;
+  height: 672px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 4rem;
+}
+.signin-img-title {
+  font-size: 48px;
+  font-family: "mplus1-medium";
+  line-height: 71px;
+  margin-top: 28px;
+}
+.signin-img-subtitle {
+  font-size: 28px;
+  font-weight: 400;
+}
+.signin-textbox {
+  width: 50%;
+  height: 410px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+}
+.signin-textbox-title {
+  font-family: "mplus1-medium";
+  font-size: 32px;
+  text-align: center;
+}

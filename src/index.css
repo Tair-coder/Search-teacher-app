@@ -1,13 +1,33 @@
+@font-face {
+  font-family: "mplus1";
+  src: url(".//fonts/MPLUS1p-Regular.ttf");
+}
+@font-face {
+  font-family: "mplus1-medium";
+  src: url("./fonts/MPLUS1p-Medium.ttf");
+}
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: "mplus1";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+.App {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  color: rgb(33, 33, 33);
+}
+.Toastify__toast {
+  box-shadow: none;
+  border-radius: 12px;
+}
+.Toastify__toast-body > div:last-child {
+  font-family: "mplus1-medium";
 }
