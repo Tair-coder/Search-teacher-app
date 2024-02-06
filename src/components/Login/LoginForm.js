@@ -5,6 +5,26 @@ import eye from "../img/g.svg";
 import hideEye from "../img/hideEye.svg";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+const customToast = {
+  position: "top-right",
+  autoClose: 3000,
+  closeButton: false,
+  draggable: false,
+  icon: false,
+  hideProgressBar: true,
+  pauseOnHover: false,
+  progress: undefined,
+  fontFamily: false,
+  boxShadow: false,
+  theme: false,
+  style: {
+    padding: "15px 16px",
+    borderRadius: " 12px",
+    boxShadow: " none",
+    fontFamily: "mplus1-medium",
+  },
+  className: styles.errormsg,
+};
 function LoginForm() {
   const [showPassword, setShowPassword] = useState(false);
   const showPasswordHandler = () => {
@@ -12,26 +32,7 @@ function LoginForm() {
   };
 
   const notify = () => {
-    toast("Неверный логин или пароль", {
-      position: "top-right",
-      autoClose: 3000,
-      closeButton: false,
-      draggable: false,
-      icon: false,
-      hideProgressBar: true,
-      pauseOnHover: false,
-      progress: undefined,
-      fontFamily: false,
-      boxShadow: false,
-      theme: false,
-      style: {
-        padding: "15px 16px",
-        borderRadius: " 12px",
-        boxShadow: " none",
-        fontFamily: "mplus1-medium",
-      },
-      className: styles.errormsg,
-    });
+    toast("Неверный логин или пароль", customToast);
   };
   const formik = useFormik({
     initialValues: { login: "", password: "" },

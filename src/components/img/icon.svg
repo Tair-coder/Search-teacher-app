@@ -1,0 +1,11 @@
+<svg width="24.000000" height="24.000000" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<defs>
+		<clipPath id="clip1_3552">
+			<rect id="icon" width="24.000000" height="24.000000" fill="white" fill-opacity="0"/>
+		</clipPath>
+	</defs>
+	<rect id="icon" width="24.000000" height="24.000000" fill="#FFFFFF" fill-opacity="0"/>
+	<g clip-path="url(#clip1_3552)">
+		<path id="Vector" d="M13.7607 5.98505L7.75 11.9958L13.7607 18.0065L15.25 16.5173L10.7285 11.9958L15.25 7.4743L13.7607 5.98505Z" fill="#292929" fill-opacity="1.000000" fill-rule="nonzero"/>
+	</g>
+</svg>

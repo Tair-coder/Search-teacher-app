@@ -1,0 +1,83 @@
+.signInForm {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.signinInput {
+  width: 343px;
+  height: 52px;
+  padding: 13px 16px;
+  background: #f8f8f8;
+  font-family: "mplus1-medium";
+  border-radius: 12px;
+}
+.signinInput:active,
+.signinInput:focus {
+  border: 1px solid rgb(41, 41, 41);
+}
+.signinPasswordInput {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+}
+.errorMsg {
+  color: rgb(236, 0, 0);
+  font-family: "mplus1-medium";
+  font-size: 12px;
+}
+.passwordEye {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: 15px;
+  top: 12.5px;
+}
+.cleanBtnInput {
+  z-index: 2;
+  width: 27px;
+  height: 27px;
+  position: absolute;
+  top: 13px;
+  right: 15px;
+}
+.cleanBtnInput::before {
+  content: url("../img/close-circle.svg");
+}
+.signinValidation {
+  list-style: disc;
+  padding-left: 18px;
+}
+.signinValidation li {
+  list-style: disc;
+  color: rgb(118, 118, 118);
+  font-family: "mplus1-medium";
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0%;
+}
+.signinValidation .correct {
+  color: #1ba228;
+}
+.signinValidation .correct::after {
+  content: " ✅";
+}
+.signinValidation .wrong {
+  color: #ec0000;
+}
+.signinValidation .wrong::after {
+  content: " ❌";
+}
+.signinBtn:disabled {
+  color: rgb(118, 118, 118);
+  background: #d7d7d7;
+  cursor: auto;
+}
+.signinBtn {
+  width: 343px;
+  height: 50px;
+  border-radius: 12px;
+  background: rgb(41, 41, 41);
+  color: #f8f8f8;
+  margin-top: 10px;
+}

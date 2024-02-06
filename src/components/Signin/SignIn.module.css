@@ -3,6 +3,29 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+}
+.backBtn {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  top: 47px;
+  left: 52%;
+  color: #000;
+  font-family: "mplus1-medium";
+  text-decoration: none;
+}
+.backBtn::before {
+  content: url("../img/icon.svg");
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #c0c0c033;
+  margin-right: 12px;
+  border-radius: 50px;
+  padding-top: 4px;
 }
 .signin-bg-photo {
   width: 50%;
@@ -25,12 +48,13 @@
 }
 .signin-textbox {
   width: 50%;
-  height: 410px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 48px;
+  padding-top: 18px;
 }
+
 .signin-textbox-title {
   font-family: "mplus1-medium";
   font-size: 32px;

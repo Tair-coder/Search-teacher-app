@@ -2,9 +2,13 @@ import React from "react";
 import SignInForm from "./SignInForm";
 import styles from "./SignIn.module.css";
 import illustration from "../img/Illustration.svg";
+import { NavLink } from "react-router-dom";
 function SignIn() {
   return (
     <div className={styles.container}>
+      <NavLink to={"/"} className={styles.backBtn}>
+        Назад
+      </NavLink>
       <div className={styles["signin-bg-photo"]}>
         <img src={illustration} alt="Illustration" />
         <h1 className={styles["signin-img-title"]}>Lorby</h1>

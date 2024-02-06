@@ -69,7 +69,7 @@ input,
 textarea,
 button,
 select {
-  font-family: inherit;
+  font-family: "mplus1-medium";
   font-size: inherit;
   color: inherit;
   background-color: transparent;
