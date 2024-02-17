@@ -4,12 +4,39 @@ import styles from "./SignInForm.module.css";
 import eye from "../img/g.svg";
 import hideEye from "../img/hideEye.svg";
 import { signInSchemas } from "../../schemas/main";
+import axios from "axios";
+const url = "https://berlin-backender.org.kg/lorby/authentication/register/";
 
-const onSubmit = (values, action) => {
-  console.log(values);
-  action.resetForm();
+// последнее изменение объект values его ключи по другому называются что приводит к ошибке
+const postData = async (values, setEmailPage, setSignInValues) => {
+  await axios
+    .post(
+      url,
+      {
+        email: values.email,
+        username: values.login,
+        password: values.password,
+        password_confirm: values.confirmPassword,
+      },
+      {
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json", // Добавленный заголовок Accept
+        },
+      }
+    )
+    .then((data) => {
+      setEmailPage(true);
+      setSignInValues({ username: values.login, password: values.password });
+    })
+    .catch((err) => console.log(err));
 };
-function SignInForm() {
+
+function SignInForm(props) {
+  const onSubmit = (values, action) => {
+    postData(values, props.setEmailPage, props.setSignInValues);
+    action.resetForm();
+  };
   // password eyes
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
@@ -21,25 +48,18 @@ function SignInForm() {
   };
   // password eyes END
   // formik hook
-  const {
-    isSubmitting,
-    errors,
-    handleBlur,
-    handleChange,
-    values,
-    handleSubmit,
-    touched,
-  } = useFormik({
-    initialValues: {
-      email: "",
-      login: "",
-      password: "",
-      confirmPassword: "",
-    },
-    validationSchema: signInSchemas,
-    onSubmit,
-  });
-  console.log(errors.password);
+  const { errors, handleBlur, handleChange, values, handleSubmit, touched } =
+    useFormik({
+      initialValues: {
+        email: "",
+        login: "",
+        password: "",
+        confirmPassword: "",
+      },
+      validationSchema: signInSchemas,
+      onSubmit,
+    });
+
   return (
     <form className={styles.signInForm} onSubmit={handleSubmit}>
       <input
@@ -152,10 +172,10 @@ function SignInForm() {
         type="submit"
         className={styles.signinBtn}
         disabled={
-          values.email.length == 0 ||
-          values.login.length == 0 ||
-          values.password.length == 0 ||
-          values.confirmPassword.length == 0 ||
+          values.email.length === 0 ||
+          values.login.length === 0 ||
+          values.password.length === 0 ||
+          values.confirmPassword.length === 0 ||
           Object.keys(errors).length !== 0
         }
       >

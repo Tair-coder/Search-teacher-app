@@ -1,0 +1,21 @@
+.home__content {
+  height: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+}
+.home__title {
+  color: rgb(33, 33, 33);
+  font-family: "mplus1-medium";
+  font-size: 36px;
+}
+.home__subtitle {
+  color: rgb(33, 33, 33);
+  font-size: 20px;
+}
+.home__exitbtn {
+  font-size: 16px;
+}

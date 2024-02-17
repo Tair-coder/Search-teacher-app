@@ -1,0 +1,55 @@
+.confirmEmail__form {
+  display: flex;
+  flex-direction: column;
+  width: 343px;
+  gap: 57px;
+}
+.confirmEmail__inputs {
+  display: flex;
+  gap: 12px;
+  align-self: center;
+}
+.confirmEmail__inputs.error .confirmEmail__input {
+  border: 1px solid rgb(236, 0, 0);
+  border-radius: 12px;
+}
+.confirmEmail__error {
+  display: flex;
+  align-self: center;
+  margin-bottom: 10px;
+  color: rgb(236, 0, 0);
+  font-family: "mplus1-medium";
+}
+.confirmEmail__input {
+  max-width: 56px;
+  padding: 13px 16px;
+  font-family: "mplus1-medium";
+  border-radius: 12px;
+  background: rgb(244, 244, 244);
+  text-align: center;
+  font-size: 24px;
+  vertical-align: bottom;
+}
+.confirmEmail__input::-webkit-outer-spin-button,
+.confirmEmail__input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+.confirmEmail__btn {
+  border-radius: 12px;
+  padding: 13px 16px;
+  font-family: "mplus1-medium";
+  font-size: 16px;
+  color: rgb(248, 248, 248);
+  background: rgb(41, 41, 41);
+}
+.confirmEmail__btn:disabled {
+  background: rgb(215, 215, 215);
+  color: rgb(118, 118, 118);
+}
+.confirmEmail__btnAgain {
+  padding: 13px 16px;
+  border-radius: 12px;
+  background: rgb(255, 255, 255);
+}

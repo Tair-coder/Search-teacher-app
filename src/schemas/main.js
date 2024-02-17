@@ -1,5 +1,4 @@
 import * as yup from "yup";
-const passwordMatches = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&*()_+<>?]).+$/;
 export const signInSchemas = yup.object().shape({
   email: yup.string().email().required(),
   login: yup.string().required(),
